@@ -1,0 +1,89 @@
+***************
+RED PLANET NEXT
+***************
+
+EN PROCESO
+==========
+
+
+BUGS
+====
+
+
+POR HACER
+=========
+
+
+HECHO
+=====
+28/06/26 - Músicas WYZ -> PT3
+03/06/26 - Objetos animados
+02/06/26 - Marcador rodante
+30/05/26 - Objetos para puntuar
+09/05/26 - Versión ES
+27/04/26 - Sonidos FX en mono (ambos canales)
+24/04/26 - FX
+20/04/26 - Posicionar enemigos
+19/04/26 - Documentación
+19/04/26 - Carátula ZX NEXT
+16/04/26 - Puntuación
+15/04/26 - Mensajes de ayuda en la última pantalla
+15/04/26 - Salto corto al soltar tecla de salto
+14/04/26 - Finalización de la partida
+13/04/26 - Colocación de TNT en pantalla final
+12/04/26 - Posicionar hotspots
+12/04/26 - Recrear Nivel 2 de RedPlanet en TILED
+10/04/26 - Secuencia de explosiones al terminar con éxito
+08/04/26 - Valores críticos en el HUD en rojo
+08/04/26 - Mensajes de GAME OVER y ENDING
+06/04/26 - Se repara BUG; al inicio aparece cortada la izda. del mapa
+06/04/26 - Pantalla de menú inicial (title)
+05/04/26 - Eliminar selección de idioma
+04/04/26 - Fuente letras galácticas
+01/04/26 - Sistema de puntos; SC/HI
+01/04/26 - Player al morir sale de pantalla
+31/03/26 - Textos del mapa
+31/03/26 - Números digitales 7 segmentos
+31/03/26 - HUD
+27/03/26 - Lineales verticales miran a ambos lados
+26/03/26 - Lógica de hotspots Keys (puertas con tile 26)
+25/03/26 - Optimizar FANTYS
+25/03/26 - Lógica de hotspots Ammo
+22/03/26 - Lógica de hotspots Oxygen
+22/03/26 - Diferenciar objetos recogidos según su tipo
+22/03/26 - Posicionar hotspots
+11/03/26 - Evita pequeños saltos al bajar sobre plataforma
+11/03/26 - Animación explosiones de enemigos
+09/03/26 - 10 vidas y continuar desde el mismo sitio
+09/03/26 - Animación de plataformas móviles
+06/03/26 - Animación al disparar
+06/03/26 - Posicionar disparo en los laterales del player
+04/03/26 - Animaciones del player
+04/03/26 - Tiles animados
+15/02/26 - Recrear Nivel 1 de RedPlanet en TILED
+14/02/26 - Adaptar sprites/tiles de RedPlanet
+
+
+NOTAS
+=====
+
+enemigos lineales: tipo 1
+enemigos fantys: tipo 2
+enemigos jumpers: tipo 3
+plataformas: tipo 49
+objetos que se recogen: tipo 50
+---------------------------------------
+HUD GRÁFICO:
+en el fichero hud.bas cargamos el fichero hud.scr (que tendremos en "data/gfx/") así:
+LoadSD("gfx/hud.scr",$4000,6912,0)
+CROP_ULA
+Tamaño: 256x192 px. 8 colores clásicos
+para convertir de PNG a SCR:
+python -c "from PIL import Image; Image.open('hud.png').convert('RGBA').save('hud.png')"
+python png2scr.py hud.png
+---------------------------------------
+PANTALLA MENU:
+Editar title.png con aseprite, manteniendo paleta. 256x192 256 colores.
+gfx2next -bitmap title.png
+Renombrar el archivo .nxi a .bin y guardar en Data/gfx
+---------------------------------------

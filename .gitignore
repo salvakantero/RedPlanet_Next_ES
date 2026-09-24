@@ -1,0 +1,17 @@
+game.bin
+game.cfg
+Memory.txt
+NMS_Engine.code-workspace
+*tiled-project
+*.tiled-session
+*.world
+config_protmx.txt
+config_tb.txt
+cspect.log
+*.log
+cspect.log
+config_next_ms_engine_updater.txt
+*.nex
+loader.bas
+Launch_Game.bat
+.vscode/tasks.json
